@@ -1,0 +1,66 @@
+/* 
+ * Name: Nic DeTroia
+ * Date: September 10, 2023
+ * File Name: Lab02.java
+ * Description: This program generates a random password following specific rules.
+ */
+
+import java.util.Random;
+
+public class Lab02 {
+    public static void main(String[] args) {
+        // Create a new Random object
+        Random random = new Random();
+
+        // Define character sets
+        String letters = "abcdefghijklmnopqrstuvwxyz";
+        String digits = "0123456789";
+        String special = "$_.";
+
+        // Create a StringBuilder to collect characters for the password
+        StringBuilder passwordBuilder = new StringBuilder();
+
+        // Password rules
+        int length = 8;
+        int uppercaseCount = 1;
+        int lowercaseCount = 4;
+        int digitCount = 2;
+        int specialCount = 1;
+
+        // Generate uppercase letters
+        for (int i = 0; i < uppercaseCount; i++) {
+            char randomChar = letters.charAt(random.nextInt(letters.length()));
+            String uppercaseChar = String.valueOf(randomChar).toUpperCase();
+            passwordBuilder.append(uppercaseChar);
+        }
+
+        // Generate lowercase letters
+        for (int i = 0; i < lowercaseCount; i++) {
+            char randomChar = letters.charAt(random.nextInt(letters.length()));
+            passwordBuilder.append(randomChar);
+        }
+
+        // Generate digits
+        for (int i = 0; i < digitCount; i++) {
+            char randomChar = digits.charAt(random.nextInt(digits.length()));
+            passwordBuilder.append(randomChar);
+        }
+
+        // Generate special characters
+        for (int i = 0; i < specialCount; i++) {
+            char randomChar = special.charAt(random.nextInt(special.length()));
+            passwordBuilder.append(randomChar);
+        }
+
+        // Generate remaining characters randomly
+        for (int i = passwordBuilder.length(); i < length; i++) {
+            String password = random.nextBoolean() ? letters : digits;
+            char randomChar = password.charAt(random.nextInt(password.length()));
+            passwordBuilder.append(randomChar);
+        }
+
+        // Print the final password
+        System.out.println(passwordBuilder.toString());
+    }
+}
+
