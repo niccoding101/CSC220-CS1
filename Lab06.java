@@ -20,7 +20,7 @@ public class Lab06 {
                 int x = j * 100; 
                 int y = i * 100;
                 rects[i][j] = new Rectangle(x, y, 100, 100);
-                rects[i][j].setFillColor(1, 1, 1);
+                rects[i][j].setFillColor(255, 255, 255);
                 rects[i][j].setMousePressedHandler(Lab06::onMousePressed);
             }
         }
@@ -42,10 +42,10 @@ public class Lab06 {
     // Check if the Rectangle (light) is on by inspecting its fill color elements.
     public static void toggle(int r, int c) {
         Rectangle rect = rects[r][c];
-        if (rect.getFillColor().getRed() == 1.0 && rect.getFillColor().getGreen() == 1.0 && rect.getFillColor().getBlue() == 1.0) {  // If color is white
+        if (rect.getFillColor().getRed() == 255 && rect.getFillColor().getGreen() == 255 && rect.getFillColor().getBlue() == 255) {  // If color is white
             rect.setFillColor(0, 0, 0);  // Change to black
         } else {
-            rect.setFillColor(1, 1, 1);  // Change to white
+            rect.setFillColor(255, 255, 255);  // Change to white
         }
     }
 }
