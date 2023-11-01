@@ -49,3 +49,21 @@ math sqrt > 1 && Math.tan(0.5) == math.sin(0.5) * Math.cos(0.5)
 multipled by the cosine of 0.5 radians. If both condiitons are true, the entire expression evaulates to true.
 
 /exit
+
+Updated: 
+
+// Problem 1 long a = 13L; short b = 4; System.out.println( a / (double) b );
+
+// Problem 2 int c = 11; double d = 2.0; System.out.println( c - 2 * d );
+
+// Problem 3 int j = 2; int k = 3; int l = 4; System.out.println( j % k < k % l );
+
+// Problem 4 int x = 5; int y = 1; String nada = “”; nada += x - y * y; //results in 4 and when assigned to the nada variable it becomes 007 System.out.println(nada);
+
+// Problem 5 int mph = 60; int mins = 234; int remaining = mins % mph;
+
+System.out.println( mins + " total minutes is equivalent to " + (mins / mph) + " hours and " + remaining + " minutes" );
+
+// Problem 6 System.out.println( (8/2) * (2+2) ); //first evaluate (2+2) // results in 4, so expression becomes (8/2) * 4 // (8/2) = 4, 4*4 // result = 16
+
+//Problem 7 if(Math.sqrt(2) > 1 && Math.tan(0.5) == Math.sin(0.5) * Math.cos(0.5)) { System.out.println(“True”); } else { System.out.println(“False”); }
